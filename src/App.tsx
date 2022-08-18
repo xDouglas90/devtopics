@@ -1,5 +1,6 @@
-import { FontStyles } from './styles/FontStyles.js';
-import { GlobalStyles } from './styles/FontStyles.js';
+import { FontStyles } from "./styles/FontStyles";
+import { GlobalStyles } from "./styles/GlobalStyles";
+
 
 function App() {
   return (

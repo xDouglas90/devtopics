@@ -3,12 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 import colors from './Colors';
 
 export const GlobalStyles = createGlobalStyle`
-    :root {
-        font-family: 'Nunito', sans-serif;
-        font-size: 16px;
-        line-height: 24px;
-        font-weight: 400;
-    
+    :root {  
         font-synthesis: none;
         text-rendering: optimizeLegibility;
         -webkit-font-smoothing: antialiased;
@@ -37,6 +32,13 @@ export const GlobalStyles = createGlobalStyle`
         padding: 0;
     }
 
+    body, input, textarea, button {
+        font-family: 'Nunito', sans-serif;
+        font-size: 1rem;
+        line-height: 24px;
+        font-weight: 400;
+    }
+
     h1, h2, h3, h4, h5, h6, strong {
         color: ${colors.secondary};
         font-weight: 700;
@@ -57,10 +59,6 @@ export const GlobalStyles = createGlobalStyle`
         outline: none;
         cursor: pointer;
         padding: 0;
-    }
-
-    input, select, textarea {
-        background-color: ${colors.brandGreenLight};
     }
 
     [disabled] {
