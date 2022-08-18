@@ -1,3 +1,5 @@
+import { Topbar } from "./components";
+
 import { FontStyles } from "./styles/FontStyles";
 import { GlobalStyles } from "./styles/GlobalStyles";
 
@@ -7,7 +9,7 @@ function App() {
     <>
       <FontStyles />
       <GlobalStyles />
-      <h1>Hello World</h1>
+      <Topbar />
     </>
   );
 }
