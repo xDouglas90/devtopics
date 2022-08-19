@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
     gap: 2rem;
 
     max-width: 70rem;
-    padding: 0 1rem;
+    padding: 5.5rem 1rem 0;
     margin: 2rem auto;
 
     @media (min-width: 992px) {

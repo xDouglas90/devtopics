@@ -5,6 +5,7 @@ import colors from './Colors';
 export const GlobalStyles = createGlobalStyle`
     :root {  
         --primary-color: ${colors.primary};
+        --primary-lt-color: ${colors.primaryLight};
         --secondary-color: ${colors.secondary};
         --tertiary-color: ${colors.tertiary};
         --gray-800: ${colors.gray1};

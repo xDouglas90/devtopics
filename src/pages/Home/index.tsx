@@ -1,10 +1,11 @@
+import { Post, Sidebar } from "../../components"
 import { Wrapper } from "./styles"
 
 export const Home = () => {
   return (    
     <Wrapper>
-        <aside>Aside</aside>
-        <main>main</main>
+        <Sidebar />
+        <Post />
     </Wrapper>
   )
 }
