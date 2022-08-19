@@ -1,11 +1,14 @@
-import { Post, Sidebar } from "../../components"
-import { Wrapper } from "./styles"
+import { Post, Sidebar } from '../../components';
+import { Wrapper } from './styles';
 
 export const Home = () => {
-  return (    
+  return (
     <Wrapper>
-        <Sidebar />
+      <Sidebar />
+      <section>
         <Post />
+        <Post />
+      </section>
     </Wrapper>
-  )
-}
+  );
+};
