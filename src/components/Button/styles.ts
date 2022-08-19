@@ -26,8 +26,8 @@ export const Button = styled.a<ButtonProps>`
   &:hover {
     background: ${({ isPrimary }) =>
     isPrimary ? 'var(--primary-color)' : 'var(--primary-lt-color)'};
-    color: var(--white-color);
+    color: ${({ isPrimary }) => isPrimary ? 'var(--white-color)' : 'var(--gray-800)'};
     cursor: pointer;
-    text-shadow: 0 0 2px var(--gray-800);
+    text-shadow: ${({ isPrimary }) => (isPrimary ? '0 0 2px var(--gray-800)' : 'none')};
   }
 `;

@@ -25,6 +25,11 @@ export const GlobalStyles = createGlobalStyle`
         -webkit-text-size-adjust: 100%;
     }
 
+    :focus {
+        outline: transparent;
+        box-shadow: 0 0 0 2px var(--primary-color);
+    }
+
     *, *::after, *::before {
         box-sizing: border-box;
     }   

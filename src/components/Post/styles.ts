@@ -148,3 +148,61 @@ export const PostFooter = styled.footer`
     }
   }
 `;
+
+export const CommentForm = styled.form`
+  border-top: 1px solid var(--gray-600);
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  width: 100%;
+
+  label strong {
+    color: var(--gray-100);
+    line-height: 1.6;
+  }
+
+  textarea {
+    background: var(--gray-800);
+    border: 0;
+    border-radius: 8px;
+    color: var(--gray-100);
+    height: 6rem;
+    line-height: 1.4;
+    padding: 1rem;
+    resize: none;
+    width: 100%;
+
+    &:hover {
+      cursor: text;
+    }
+  }
+
+  footer {
+    visibility: hidden;
+    max-height: 0;
+  }
+
+  button {
+    background: var(--primary-color);
+    border: 0;
+    border-radius: 8px;
+    color: var(--white-color);
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 1rem;
+    padding: 0.5rem 1.5rem;
+    text-shadow: 0 0 2px var(--gray-800);
+    transition: background 0.2s;
+
+    &:hover {
+      background: var(--primary-lt-color);
+      color: var(--gray-800);
+      text-shadow: none;
+    }
+  }
+
+  &:focus-within footer {
+    visibility: visible;
+    max-height: 100%;
+  }
+`;

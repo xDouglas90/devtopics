@@ -1,4 +1,10 @@
-import { Container, PostContent, PostFooter, PostHeader } from './styles';
+import {
+  CommentForm,
+  Container,
+  PostContent,
+  PostFooter,
+  PostHeader,
+} from './styles';
 
 import { TbShare, TbBrandTelegram, TbBrandWhatsapp } from 'react-icons/tb';
 import { FcLike } from 'react-icons/fc';
@@ -78,6 +84,16 @@ export const Post = () => {
           </div>
         </div>
       </PostFooter>
+
+      <CommentForm>
+        <label htmlFor="comment">
+          <strong>Deixe seu feedback:</strong>
+        </label>
+        <textarea name="comment" placeholder="Deixe um comentário" />
+        <footer>
+          <button type="submit">Publicar</button>
+        </footer>
+      </CommentForm>
     </Container>
   );
 };
