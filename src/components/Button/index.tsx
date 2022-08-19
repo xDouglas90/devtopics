@@ -2,13 +2,13 @@ import { Button as Btn } from './styles';
 
 interface ButtonProps {
     children: React.ReactNode;
-    type: 'primary' | 'secondary';
+    isPrimary: boolean;
     href?: string;
 }
 
-export const Button = ({ children, type }: ButtonProps) => {
+export const Button = ({ children, isPrimary }: ButtonProps) => {
   return (
-    <Btn type={type}>
+    <Btn isPrimary={isPrimary}>
       {children}
     </Btn>
   );

@@ -1,16 +1,16 @@
 import styled from 'styled-components';
 
 interface ButtonProps {
-  type: 'primary' | 'secondary';
+  isPrimary: boolean;
 }
 
 export const Button = styled.a<ButtonProps>`
-  background: ${({ type }) =>
-    type === 'primary' ? 'transparent' : 'var(--primary-color)'};
+  background: ${({ isPrimary }) =>
+    isPrimary ? 'transparent' : 'var(--primary-color)'};
   border: 1px solid var(--primary-color);
   border-radius: 8px;
-  color: ${({ type }) =>
-    type === 'primary' ? 'var(--primary-color)' : 'var(--white-color)'};
+  color: ${({ isPrimary }) =>
+    isPrimary ? 'var(--primary-color)' : 'var(--white-color)'};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,8 +24,8 @@ export const Button = styled.a<ButtonProps>`
   width: 180px;
 
   &:hover {
-    background: ${({ type }) =>
-    type === 'primary' ? 'var(--primary-color)' : 'var(--primary-lt-color)'};
+    background: ${({ isPrimary }) =>
+    isPrimary ? 'var(--primary-color)' : 'var(--primary-lt-color)'};
     color: var(--white-color);
     cursor: pointer;
     text-shadow: 0 0 2px var(--gray-800);

@@ -55,7 +55,7 @@ export const Sidebar = () => {
       </Profile>
 
       <Footer>
-        <Button href="#" type="primary">
+        <Button href="#" isPrimary={true}>
           <BiEditAlt /> Editar seu perfil
         </Button>
       </Footer>
