@@ -6,7 +6,7 @@ export const Sidebar = styled.aside`
   overflow: hidden;
 
   &:hover {
-    box-shadow: 0 5px 32px 0 rgba(31, 38, 135, 0.37);
+    box-shadow: 0 1px 15px 0 var(--primary-lt-color);
   }
 `;
 
@@ -20,6 +20,7 @@ export const Profile = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: -2.85rem;
 
   strong {
     color: var(--white-color);
@@ -31,24 +32,6 @@ export const Profile = styled.div`
   span {
     font-size: 0.875rem;
     margin-bottom: 1rem;
-  }
-`;
-
-export const Avatar = styled.img`
-  border: 4px solid var(--gray-800);
-  border-radius: 8px;
-  margin: -4rem 0 1rem;
-  outline: 2px solid var(--primary-color);
-  width: calc(6rem + 12px);
-  transition: transform 0.3s ease-in-out;
-
-  &:hover {
-    transform: scale(1.3);
-  }
-
-  @media (min-width: 768px) {
-    margin: -2.75rem 0 1rem;
-    width: calc(4rem + 12px);
   }
 `;
 

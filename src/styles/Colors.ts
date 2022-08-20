@@ -1,6 +1,6 @@
 export default {
-  primary: 'orange',
-  primaryLight: '#98e7e4',
+  primary: 'rgb(242, 100, 25)',
+  primaryLight: 'rgba(242, 136, 0, 0.55)',
   secondary: '#122D42',
   tertiary: '#4D12EE',
   gray1: '#121214',

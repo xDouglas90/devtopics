@@ -1,6 +1,5 @@
 import { Button } from '../Button';
 import {
-  Avatar,
   Cover,
   Footer,
   Profile,
@@ -10,6 +9,7 @@ import {
 
 import { FiGithub, FiLinkedin, FiTwitter, FiInstagram } from 'react-icons/fi';
 import { BiEditAlt } from 'react-icons/bi';
+import { Avatar } from '../Avatar';
 
 export const Sidebar = () => {
   return (
@@ -19,7 +19,11 @@ export const Sidebar = () => {
       </header>
 
       <Profile>
-        <Avatar src="https://github.com/xdouglas90.png" />
+        <Avatar
+          url="https://github.com/xdouglas90.png"
+          hasBorder={true}
+          userProfile="#"
+        />
         <strong>Douglas Oliveira</strong>
         <span>Web Developer Jr.</span>
         <SocialLinks>

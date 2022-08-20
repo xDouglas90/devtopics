@@ -1,6 +1,5 @@
 import {
   Author,
-  AuthorAvatar,
   AuthorInfos,
   AuthorName,
   AuthorRole,
@@ -32,13 +31,18 @@ import { TbShare, TbBrandTelegram, TbBrandWhatsapp } from 'react-icons/tb';
 import { FcLike } from 'react-icons/fc';
 import { RiDislikeLine } from 'react-icons/ri';
 import { Comment } from '../Comment';
+import { Avatar } from '../Avatar';
 
 export const Post = () => {
   return (
     <Container>
       <PostHeader>
         <Author>
-          <AuthorAvatar src="https://github.com/xdouglas90.png" />
+          <Avatar
+            url="https://github.com/xdouglas90.png"
+            hasBorder={true}
+            userProfile="#"
+          />
           <AuthorInfos>
             <AuthorName>Douglas Oliveira</AuthorName>
             <AuthorRole>Web Developer Jr.</AuthorRole>

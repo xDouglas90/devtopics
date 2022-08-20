@@ -12,12 +12,6 @@ export const UserPicture = styled.a`
   width: fit-content;
 `;
 
-export const Avatar = styled.img`
-  border-radius: 8px;
-  width: 3.5rem;
-  height: 3.5rem;
-`;
-
 export const CommentBox = styled.div`
   flex: 1;
 `;

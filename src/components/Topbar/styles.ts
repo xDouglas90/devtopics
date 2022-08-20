@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Header = styled.header`
   background: rgba(32, 32, 36, 0.8);
-  box-shadow: 0 1px 1px rgba(31, 38, 135, 0.37);
+  box-shadow: 0 -10px 25px var(--primary-lt-color);
   -webkit-backdrop-filter: blur(1.5px);
   backdrop-filter: blur(1.5px); 
   display: flex;

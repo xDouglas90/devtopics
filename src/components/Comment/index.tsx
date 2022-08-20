@@ -2,7 +2,6 @@ import {
   ApplaudBtn,
   ApplaudBtnText,
   ApplaudCounter,
-  Avatar,
   CommentBox,
   CommentBoxFooter,
   CommentBoxHeader,
@@ -17,12 +16,17 @@ import {
 } from './styles';
 
 import { RiDeleteBin2Line } from 'react-icons/ri';
+import { Avatar } from '../Avatar';
 
 export const Comment = () => {
   return (
     <Container>
       <UserPicture>
-        <Avatar src="https://github.com/xdouglas90.png" />
+      <Avatar
+          url="https://github.com/xdouglas90.png"
+          hasBorder={false}
+          userProfile="#"
+        />
       </UserPicture>
 
       <CommentBox>

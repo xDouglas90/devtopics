@@ -19,7 +19,7 @@ export const Container = styled.article`
   }
 
   &:hover {
-    box-shadow: 0 5px 32px 0 rgba(31, 38, 135, 0.37);
+    box-shadow: 0 1px 15px 0 var(--primary-lt-color);
   }
 `;
 
@@ -48,15 +48,6 @@ export const AuthorName = styled.a`
   font-weight: 700;
 `;
 
-export const AuthorAvatar = styled.img`
-  border: 4px solid var(--gray-800);
-  border-radius: 8px;
-  cursor: pointer;
-  outline: 2px solid var(--primary-color);
-  width: calc(3.5rem + 12px);
-  height: calc(3.5rem + 12px);
-`;
-
 export const AuthorRole = styled.span`
   color: var(--gray-500);
   font-size: 0.875rem;
@@ -79,12 +70,12 @@ export const PostContentText = styled.p`
 `;
 
 export const PostContentLink = styled.a`
-  color: var(--primary-color);
-  font-weight: 500;
+  color: var(--primary-lt-color);
+  font-weight: 700;
   text-decoration: none;
 
   &:hover {
-    color: var(--primary-lt-color);
+    color: var(--primary-color);
   }
 `;
 
@@ -232,10 +223,10 @@ export const CommentField = styled.textarea`
 `;
 
 export const CommentBtn = styled.button`
-  background: var(--primary-color);
+  background: var(--primary-lt-color);
   border: 0;
   border-radius: 8px;
-  color: var(--white-color);
+  color: var(--white-500);
   cursor: pointer;
   font-size: 1.2rem;
   font-weight: 700;
@@ -245,8 +236,8 @@ export const CommentBtn = styled.button`
   transition: background 0.2s;
 
   &:hover {
-    background: var(--primary-lt-color);
-    color: var(--gray-800);
+    background: var(--primary-color);
+    color: var(--white-color);
     text-shadow: none;
   }
 `;
