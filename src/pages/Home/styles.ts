@@ -17,3 +17,5 @@ export const Wrapper = styled.div`
         align-items: flex-start;
     }
 `;
+
+export const PostsSection = styled.section``;
