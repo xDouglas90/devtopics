@@ -7,8 +7,12 @@ export const Container = styled.article`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: 2.5rem;
+  padding: 1rem;
   width: 100%;
+
+  @media (min-width: 576px) {
+    padding: 2.5rem;
+  }
 
   & + & {
     margin-top: 2rem;
@@ -21,62 +25,66 @@ export const Container = styled.article`
 
 export const PostHeader = styled.header`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   width: 100%;
+`;
 
-  > div {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+export const Author = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+`;
 
-    > div {
-      display: flex;
-      flex-direction: column;
+export const AuthorInfos = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 
-      > strong {
-        color: var(--white-color);
-        line-height: 1.6;
-      }
+export const AuthorName = styled.a`
+  color: var(--white-color);
+  cursor: pointer;
+  line-height: 1.6;
+  font-weight: 700;
+`;
 
-      > span {
-        color: var(--gray-500);
-        font-size: 0.875rem;
-      }
-    }
+export const AuthorAvatar = styled.img`
+  border: 4px solid var(--gray-800);
+  border-radius: 8px;
+  cursor: pointer;
+  outline: 2px solid var(--primary-color);
+  width: calc(3.5rem + 12px);
+  height: calc(3.5rem + 12px);
+`;
 
-    > a img {
-      border: 4px solid var(--gray-800);
-      border-radius: 8px;
-      outline: 2px solid var(--primary-color);
-      width: calc(4rem + 12px);
-    }
-  }
+export const AuthorRole = styled.span`
+  color: var(--gray-500);
+  font-size: 0.875rem;
+`;
 
-  time {
-    color: var(--gray-500);
-    font-size: 0.875rem;
-  }
+export const PostPublishedAt = styled.time`
+  color: var(--gray-500);
+  font-size: 0.875rem;
 `;
 
 export const PostContent = styled.div`
   line-height: 1.6;
   margin-top: 1.5rem;
+`;
 
-  p {
-    color: var(--gray-300);
-    margin-top: 1rem;
-    text-align: justify;
+export const PostContentText = styled.p`
+  color: var(--gray-300);
+  margin-top: 1rem;
+  text-align: justify;
+`;
 
-    a {
-      color: var(--primary-color);
-      font-weight: 700;
-      text-decoration: none;
+export const PostContentLink = styled.a`
+  color: var(--primary-color);
+  font-weight: 500;
+  text-decoration: none;
 
-      &:hover {
-        color: var(--primary-lt-color);
-      }
-    }
+  &:hover {
+    color: var(--primary-lt-color);
   }
 `;
 
@@ -91,41 +99,49 @@ export const PostFooter = styled.footer`
     flex-direction: row;
     align-items: center;
   }
+`;
 
-  div {
-    display: flex;
-    align-items: center;
+export const PostFooterContainer = styled.div`
+  display: flex;
+  align-items: center;
+`;
 
-    > span {
-      color: var(--gray-500);
-      font-size: 0.875rem;
-      margin-right: 1rem;
-    }
+export const PostFooterAction = styled.span`
+  color: var(--gray-500);
+  font-size: 0.875rem;
+  margin-right: 1rem;
+`;
 
-    div {
-      margin-right: 1rem;
-      position: relative;
+export const PostFooterActionItem = styled.div`
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+`;
 
-      a {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        margin-right: 0.5rem;
-      }
-    }
+export const PostFooterShare = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  gap: 0.5rem;
+  width: fit-content;
+`;
 
-    div:last-child {
-      margin-right: 0;
-    }
-  }
+export const PostFooterShareLink = styled.button`
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
 
-  div:last-child div a:hover {
+  &:hover {
     color: var(--primary-color);
 
     &::after {
       content: attr(data-tooltip);
       position: absolute;
-      bottom: 1.8rem;
+      bottom: 2.7rem;
+      left: 2px;
       background: var(--primary-color);
       color: var(--white-color);
       border-radius: 8px;
@@ -141,7 +157,7 @@ export const PostFooter = styled.footer`
     &::before {
       content: '⤹';
       position: absolute;
-      bottom: 0.8rem;
+      bottom: 1.3rem;
       color: var(--primary-color);
       font-size: 1.7rem;
       font-weight: 700;
@@ -149,60 +165,93 @@ export const PostFooter = styled.footer`
   }
 `;
 
+export const LikeBtn = styled.button`
+  background: transparent;
+  border: none;
+  color: var(--gray-400);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-right: 0.5rem;
+  padding: 0;
+
+  &:hover {
+    color: var(--primary-color);
+  }
+
+  svg {
+    filter: opacity(0.3);
+  }
+`;
+
+export const DislikeBtn = styled(LikeBtn)``;
+
+export const LikeCount = styled.strong`
+  color: var(--gray-400);
+`;
+
+export const DisLikeCount = styled(LikeCount)``;
+
 export const CommentForm = styled.form`
   border-top: 1px solid var(--gray-600);
   margin-top: 1.5rem;
   padding-top: 1.5rem;
   width: 100%;
 
-  label strong {
-    color: var(--gray-100);
-    line-height: 1.6;
-  }
-
-  textarea {
-    background: var(--gray-800);
-    border: 0;
-    border-radius: 8px;
-    color: var(--gray-100);
-    height: 6rem;
-    line-height: 1.4;
-    padding: 1rem;
-    resize: none;
-    width: 100%;
-
-    &:hover {
-      cursor: text;
-    }
-  }
-
-  footer {
-    visibility: hidden;
-    max-height: 0;
-  }
-
-  button {
-    background: var(--primary-color);
-    border: 0;
-    border-radius: 8px;
-    color: var(--white-color);
-    cursor: pointer;
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin-top: 1rem;
-    padding: 0.5rem 1.5rem;
-    text-shadow: 0 0 2px var(--gray-800);
-    transition: background 0.2s;
-
-    &:hover {
-      background: var(--primary-lt-color);
-      color: var(--gray-800);
-      text-shadow: none;
-    }
-  }
-
   &:focus-within footer {
     visibility: visible;
     max-height: 100%;
   }
+`;
+
+export const CommentFormFooter = styled.footer`
+  visibility: hidden;
+  max-height: 0;
+`;
+
+export const Label = styled.strong`
+  color: var(--gray-100);
+  line-height: 1.6;
+  padding-left: 0.2rem;
+`;
+
+export const CommentField = styled.textarea`
+  background: var(--gray-800);
+  border: 0;
+  border-radius: 8px;
+  color: var(--gray-100);
+  height: 6rem;
+  line-height: 1.4;
+  padding: 1rem;
+  resize: none;
+  width: 100%;
+
+  &:hover {
+    cursor: text;
+  }
+`;
+
+export const CommentBtn = styled.button`
+  background: var(--primary-color);
+  border: 0;
+  border-radius: 8px;
+  color: var(--white-color);
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  text-shadow: 0 0 2px var(--gray-800);
+  transition: background 0.2s;
+
+  &:hover {
+    background: var(--primary-lt-color);
+    color: var(--gray-800);
+    text-shadow: none;
+  }
+`;
+
+export const CommentsList = styled.div`
+  margin-top: 2rem;
+  width: 100%;
 `;
