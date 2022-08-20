@@ -186,11 +186,11 @@ export const LikeBtn = styled.button`
 
 export const DislikeBtn = styled(LikeBtn)``;
 
-export const LikeCount = styled.strong`
+export const LikeCounter = styled.a`
   color: var(--gray-400);
 `;
 
-export const DisLikeCount = styled(LikeCount)``;
+export const DisLikeCounter = styled(LikeCounter)``;
 
 export const CommentForm = styled.form`
   border-top: 1px solid var(--gray-600);

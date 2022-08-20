@@ -75,6 +75,7 @@ export const GlobalStyles = createGlobalStyle`
 
     a {
         color: inherit;
+        cursor: pointer;
         text-decoration: none;
     }
 

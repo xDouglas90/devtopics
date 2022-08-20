@@ -11,10 +11,10 @@ import {
   CommentsList,
   Container,
   DislikeBtn,
-  DisLikeCount,
+  DisLikeCounter,
   Label,
   LikeBtn,
-  LikeCount,
+  LikeCounter,
   PostContent,
   PostContentLink,
   PostContentText,
@@ -81,14 +81,14 @@ export const Post = () => {
               Amei
               <FcLike />
             </LikeBtn>
-            <LikeCount>0</LikeCount>
+            <LikeCounter>0</LikeCounter>
           </PostFooterActionItem>
           <PostFooterActionItem>
             <DislikeBtn>
               Odiei
               <RiDislikeLine />
             </DislikeBtn>
-            <DisLikeCount>0</DisLikeCount>
+            <DisLikeCounter>0</DisLikeCounter>
           </PostFooterActionItem>
         </PostFooterContainer>
 
