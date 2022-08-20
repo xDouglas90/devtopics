@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Sidebar = styled.aside`
+export const SidebarContainer = styled.aside`
   background: var(--gray-700);
   border-radius: 8px;
   overflow: hidden;
@@ -21,18 +21,18 @@ export const Profile = styled.div`
   flex-direction: column;
   align-items: center;
   margin-top: -2.85rem;
+`;
 
-  strong {
-    color: var(--white-color);
-    font-size: 1.2rem;
-    font-weight: 700;
-    line-height: 1.6;
-  }
+export const UserName = styled.strong`
+  color: var(--white-color);
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.6;
+`;
 
-  span {
-    font-size: 0.875rem;
-    margin-bottom: 1rem;
-  }
+export const UserRole = styled.span`
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
 `;
 
 export const SocialLinks = styled.section`
@@ -40,17 +40,17 @@ export const SocialLinks = styled.section`
   align-items: center;
   justify-content: center;
   gap: 1rem;
+`;
 
-  a {
-    color: var(--gray-300);
-    font-size: 1.25rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: color 0.2s;
+export const SocialLinksItem = styled.a`
+  color: var(--gray-300);
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
 
-    &:hover {
-      color: var(--primary-color);
-    }
+  &:hover {
+    color: var(--primary-color);
   }
 `;
 

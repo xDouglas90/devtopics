@@ -3,8 +3,11 @@ import {
   Cover,
   Footer,
   Profile,
-  Sidebar as Aside,
+  SidebarContainer,
   SocialLinks,
+  SocialLinksItem,
+  UserName,
+  UserRole,
 } from './styles';
 
 import { FiGithub, FiLinkedin, FiTwitter, FiInstagram } from 'react-icons/fi';
@@ -13,10 +16,8 @@ import { Avatar } from '../Avatar';
 
 export const Sidebar = () => {
   return (
-    <Aside>
-      <header>
-        <Cover src="https://images.unsplash.com/photo-1453928582365-b6ad33cbcf64?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=80" />
-      </header>
+    <SidebarContainer>
+      <Cover src="https://images.unsplash.com/photo-1453928582365-b6ad33cbcf64?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=80" />
 
       <Profile>
         <Avatar
@@ -24,37 +25,37 @@ export const Sidebar = () => {
           hasBorder={true}
           userProfile="#"
         />
-        <strong>Douglas Oliveira</strong>
-        <span>Web Developer Jr.</span>
+        <UserName>Douglas Oliveira</UserName>
+        <UserRole>Web Developer Jr.</UserRole>
         <SocialLinks>
-          <a
+          <SocialLinksItem
             href="https://github.com/xdouglas90/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FiGithub />
-          </a>
-          <a
+          </SocialLinksItem>
+          <SocialLinksItem
             href="https://linkedin.com/in/odouglas-oliveira"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FiLinkedin />
-          </a>
-          <a
+          </SocialLinksItem>
+          <SocialLinksItem
             href="https://twitter.com/odouglas_dev/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FiTwitter />
-          </a>
-          <a
+          </SocialLinksItem>
+          <SocialLinksItem
             href="https://instagram.com/odouglas_dev/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FiInstagram />
-          </a>
+          </SocialLinksItem>
         </SocialLinks>
       </Profile>
 
@@ -63,6 +64,6 @@ export const Sidebar = () => {
           <BiEditAlt /> Editar seu perfil
         </Button>
       </Footer>
-    </Aside>
+    </SidebarContainer>
   );
 };
