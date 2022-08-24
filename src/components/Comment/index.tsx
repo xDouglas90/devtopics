@@ -24,7 +24,6 @@ export const Comment = () => {
       <UserPicture>
       <Avatar
           url="https://github.com/xdouglas90.png"
-          hasBorder={false}
           userProfile="#"
         />
       </UserPicture>

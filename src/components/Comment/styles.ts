@@ -1,10 +1,19 @@
 import styled from 'styled-components';
 
+import { AvatarPicture } from '../Avatar/styles';
+
 export const Container = styled.div`
   display: flex;
   gap: 1rem;
   margin-top: 1.5rem;
   width: 100%;
+
+  ${AvatarPicture} {
+    border: none;
+    outline: none;
+    height: 4rem;
+    width: 4rem;
+  }
 `;
 
 export const UserPicture = styled.a`

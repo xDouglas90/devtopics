@@ -22,7 +22,6 @@ export const Sidebar = () => {
       <Profile>
         <Avatar
           url="https://github.com/xdouglas90.png"
-          hasBorder={true}
           userProfile="#"
         />
         <UserName>Douglas Oliveira</UserName>

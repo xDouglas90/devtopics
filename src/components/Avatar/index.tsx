@@ -2,14 +2,13 @@ import { AvatarLink, AvatarPicture } from './styles';
 
 interface AvatarProps {
   url: string;
-  hasBorder?: boolean;
   userProfile: string;
 }
 
-export const Avatar = ({ url, hasBorder, userProfile }: AvatarProps) => {
+export const Avatar = ({ url, userProfile }: AvatarProps) => {
   return (
     <AvatarLink href={userProfile}>
-      <AvatarPicture src={url} hasBorder={hasBorder} />
+      <AvatarPicture src={url} />
     </AvatarLink>
   );
 };

@@ -40,7 +40,6 @@ export const Post = () => {
         <Author>
           <Avatar
             url="https://github.com/xdouglas90.png"
-            hasBorder={true}
             userProfile="#"
           />
           <AuthorInfos>
