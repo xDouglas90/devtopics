@@ -1,7 +1,7 @@
 import devTopicsLogo from '../../assets/images/devtopics-logo.png';
 import { Header, Logo, Title } from "./styles"
 
-export const Topbar = () => {
+export const Topbar = ():void => {
   return (
     <Header>
         <Logo src={devTopicsLogo} alt="DevTopics logo branco" />

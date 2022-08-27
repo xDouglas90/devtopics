@@ -18,7 +18,7 @@ import {
 import { RiDeleteBin2Line } from 'react-icons/ri';
 import { Avatar } from '../Avatar';
 
-export const Comment = () => {
+export const Comment = ():void => {
   return (
     <Container>
       <UserPicture>

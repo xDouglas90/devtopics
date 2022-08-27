@@ -33,7 +33,7 @@ import { RiDislikeLine } from 'react-icons/ri';
 import { Comment } from '../Comment';
 import { Avatar } from '../Avatar';
 
-export const Post = () => {
+export const Post = ():void => {
   return (
     <Container>
       <PostHeader>

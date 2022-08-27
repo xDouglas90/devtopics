@@ -5,7 +5,7 @@ import { FontStyles } from "./styles/FontStyles";
 import { GlobalStyles } from "./styles/GlobalStyles";
 
 
-function App() {
+function App():void {
   return (
     <>
       <FontStyles />

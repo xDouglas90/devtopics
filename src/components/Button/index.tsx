@@ -6,7 +6,7 @@ interface ButtonProps {
     href?: string;
 }
 
-export const Button = ({ children, isPrimary }: ButtonProps) => {
+export const Button = ({ children, isPrimary }: ButtonProps):void => {
   return (
     <Btn isPrimary={isPrimary}>
       {children}
